@@ -10,13 +10,13 @@ public class NavigationTests {
     public static void main(String[] args) throws Exception {
 
 
-        chromeTest();
-       firefoxTest();
-        safariText();
+        //chromeTest();
+        // firefoxTest();
+           safariText();
     }
 
     @Test
-    public static void safariText() throws Exception{
+    public static void safariText() throws Exception {
 
 
         WebDriver driver = BrowserFactory.getDriver("safari");
@@ -28,16 +28,16 @@ public class NavigationTests {
         driver.navigate().back();
         Thread.sleep(2000);
         String expected = title;
-        StringUtility.verifyEquals(expected,driver.getTitle());
+        StringUtility.verifyEquals(expected, driver.getTitle());
         driver.navigate().forward();
         Thread.sleep(2000);
         String expexted1 = title1;
-        StringUtility.verifyEquals(expexted1,driver.getTitle());
+        StringUtility.verifyEquals(expexted1, driver.getTitle());
         driver.close();
     }
 
     @Test
-    public static void firefoxTest() throws Exception{
+    public static void firefoxTest() throws Exception {
 
 
         WebDriver driver = BrowserFactory.getDriver("firefox");
@@ -52,44 +52,45 @@ public class NavigationTests {
         driver.navigate().back();
         Thread.sleep(2000);
 
-        String expectedTitle = title ;
+        String expectedTitle = title;
 
-        StringUtility.verifyEquals(expectedTitle,driver.getTitle());
+        StringUtility.verifyEquals(expectedTitle, driver.getTitle());
 
 
         driver.navigate().forward();
         Thread.sleep(2000);
 
-        String expectedTitle1  = tittle1;
+        String expectedTitle1 = tittle1;
 
-        StringUtility.verifyEquals(expectedTitle1,driver.getTitle());
+        StringUtility.verifyEquals(expectedTitle1, driver.getTitle());
 
         driver.close();
-}
+    }
+
     @Test
     public static void chromeTest() throws Exception {
-        // created test method for each browser
-        // Chrome , FireFox, Safari.
+
 
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("https://google.com");
 
         String title = driver.getTitle();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         driver.navigate().to("https://etsy.com");
         String tittle1 = driver.getTitle();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         driver.navigate().back();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         String actualTittle = driver.getTitle();
         String expectedTittle = title;
 
-        StringUtility.verifyEquals(title, driver.getTitle());
+        StringUtility.verifyEquals(expectedTittle,actualTittle);
 
         driver.navigate().forward();
+        Thread.sleep(2000);
 
         String actualTittle1 = driver.getTitle();
         String expectedTittle1 = tittle1;
