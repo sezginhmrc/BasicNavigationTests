@@ -35,6 +35,4 @@ public class BrowserFactory {
                 throw  new WebDriverManagerException("INVALID BROWSER");
             }
     }
-
-
 }
