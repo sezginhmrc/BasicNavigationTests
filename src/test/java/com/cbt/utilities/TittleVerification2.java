@@ -2,8 +2,6 @@ package com.cbt.utilities;
 
 import org.openqa.selenium.WebDriver;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,7 +11,7 @@ public class TittleVerification2 {
         List<String> urls = Arrays.asList("https://www.luluandgeorgia.com/",
                 "http://wayfair.com", "http://walmart.com", "http://westelm.com");
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = DriverFactory.createADriver("chrome");
 
         driver.get(urls.get(0));
         Thread.sleep(2000);

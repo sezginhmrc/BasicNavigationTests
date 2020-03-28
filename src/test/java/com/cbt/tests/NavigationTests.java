@@ -1,6 +1,6 @@
 package com.cbt.tests;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.DriverFactory;
 import com.cbt.utilities.StringUtility;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -19,7 +19,7 @@ public class NavigationTests {
     public static void safariText() throws Exception {
 
 
-        WebDriver driver = BrowserFactory.getDriver("safari");
+        WebDriver driver = DriverFactory.createADriver("safari");
         driver.get("https://google.com");
         String title = driver.getTitle();
         driver.navigate().to("https://etsy.com");
@@ -40,7 +40,7 @@ public class NavigationTests {
     public static void firefoxTest() throws Exception {
 
 
-        WebDriver driver = BrowserFactory.getDriver("firefox");
+        WebDriver driver = DriverFactory.createADriver("firefox");
         driver.get("https://google.com");
 
         String title = driver.getTitle();
@@ -71,7 +71,7 @@ public class NavigationTests {
     public static void chromeTest() throws Exception {
 
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = DriverFactory.createADriver("chrome");
         driver.get("https://google.com");
 
         String title = driver.getTitle();

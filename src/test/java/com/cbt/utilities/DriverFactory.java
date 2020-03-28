@@ -9,9 +9,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class BrowserFactory {
+public class DriverFactory {
 
-    public static WebDriver getDriver(String browser ){
+    public static WebDriver createADriver(String browser ){
 
 
 

@@ -86,7 +86,6 @@ public class Tests1to5 {
         Assert.assertEquals(actual,expected);
 
     }
-
     @AfterMethod
     public void close(){
         driver.quit();

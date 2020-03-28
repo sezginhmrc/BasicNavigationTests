@@ -15,7 +15,7 @@ public class TitleVerification {
 
 
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = DriverFactory.createADriver("chrome");
 
         List<String> titles = new ArrayList<>();
 
